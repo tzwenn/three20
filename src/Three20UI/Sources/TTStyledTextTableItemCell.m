@@ -108,7 +108,7 @@ static const CGFloat kDisclosureIndicatorWidth = 23.0f;
 - (void)didMoveToSuperview {
   [super didMoveToSuperview];
   if (self.superview) {
-    _label.backgroundColor = self.backgroundColor;
+    _label.backgroundColor = [UIColor clearColor];
   }
 }
 
