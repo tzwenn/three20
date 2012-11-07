@@ -63,7 +63,7 @@
 
 #import <TargetConditionals.h>
 
-#if TARGET_IPHONE_SIMULATOR
+/* #if TARGET_IPHONE_SIMULATOR
 
   int TTIsInDebugger();
   // We leave the __asm__ in this macro so that when a break occurs, we don't have to step out of
@@ -71,9 +71,9 @@
   #define TTDASSERT(xx) { if (!(xx)) { TTDPRINT(@"TTDASSERT failed: %s", #xx); \
                                       if (TTIsInDebugger()) { __asm__("int $3\n" : : ); }; } \
                         } ((void)0)
-#else
+#else */
   #define TTDASSERT(xx) { if (!(xx)) { TTDPRINT(@"TTDASSERT failed: %s", #xx); } } ((void)0)
-#endif // #if TARGET_IPHONE_SIMULATOR
+//#endif // #if TARGET_IPHONE_SIMULATOR
 
 #else
   #define TTDASSERT(xx) ((void)0)
